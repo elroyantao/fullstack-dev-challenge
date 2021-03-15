@@ -1,3 +1,5 @@
+import { createBreakpoints } from '@chakra-ui/theme-tools'
+
 const theme = {
     colors: {
         transparent: 'transparent',
@@ -41,7 +43,13 @@ const theme = {
         medium: 500,
         bold: 700,
     },
-    breakpoints: ['30em', '48em', '62em', '80em'],
+    breakpoints: createBreakpoints({
+        sm: '30em',
+        md: '48em',
+        lg: '62em',
+        xl: '80em',
+        '2xl': '96em',
+    }),
     space: {
         px: '1px',
         0: '0',
