@@ -7,7 +7,7 @@ import CompoundInterest from './screens/CompoundInterest'
 
 const defaultTheme = extendTheme(theme)
 
-function App() {
+const App: React.FC = () => {
     return (
         <ChakraProvider theme={defaultTheme}>
             {/* We've just bundled everything into one file here to 
