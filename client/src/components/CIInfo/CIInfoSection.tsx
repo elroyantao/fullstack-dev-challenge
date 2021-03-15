@@ -12,7 +12,9 @@ const CIInfoSection: React.FC<Props> = ({ title, amount, ...props }: Props) => {
     return (
         <Box {...props} flex="1" w="100%" p={4} borderBottom={`1px solid ${theme.colors.grey3}`}>
             <Box>
-                <Text fontSize="sm">{title}</Text>
+                <Text fontSize="sm" fontWeight="normal">
+                    {title}
+                </Text>
             </Box>
             <Box>
                 <Text fontSize="31px" fontWeight="bold">

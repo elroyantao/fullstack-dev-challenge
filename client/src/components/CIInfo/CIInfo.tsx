@@ -1,7 +1,6 @@
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
 import { IProjection } from '../../api/compoundInterest/calculateProjection'
-import theme from '../../theme'
 import CIInfoSection from './CIInfoSection'
 
 type Props = {
@@ -10,14 +9,21 @@ type Props = {
 
 const CIInfo: React.FC<Props> = ({ projections }: Props) => {
     if (!projections.length) {
-        return null
+        return (
+            <Box width="100%" bg="blue400" height="100%" borderRadius="8px" p={8}>
+                <Text fontSize="xl">
+                    Use our compound interest calculator to see how much your savings or investments
+                    might grow over time. You can include regular deposits or withdrawals.
+                </Text>
+            </Box>
+        )
     }
 
     const { totalDeposit, totalInterest, balance } = projections[projections.length - 1]
 
     return (
         <Flex direction="column" h="100%">
-            <Box m={-4} mb={0} p={4} bg={theme.colors.primary} color={theme.colors.white}>
+            <Box m={-4} mb={0} p={4} bg="primary" color="white" fontWeight="bold">
                 Your Savings Details
             </Box>
             <Flex

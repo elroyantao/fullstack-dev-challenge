@@ -60,7 +60,7 @@ const NumberSlider: React.FC<Props> = ({ value, onChange, min, max, maxSlider, s
                 focusThumbOnChange={false}
             >
                 <SliderTrack h={2}>
-                    <SliderFilledTrack />
+                    <SliderFilledTrack bgColor="primary" />
                 </SliderTrack>
                 <SliderThumb />
             </Slider>

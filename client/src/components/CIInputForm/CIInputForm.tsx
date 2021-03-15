@@ -25,7 +25,9 @@ const CIInputFrom: React.FC<Props> = ({ onChange }: Props) => {
     return (
         <VStack height="100%" justify="space-between">
             <FormControl id="principal">
-                <FormLabel fontSize="sm">Initial deposit</FormLabel>
+                <FormLabel fontSize="sm" fontWeight="normal">
+                    Initial deposit
+                </FormLabel>
                 <NumberSlider
                     value={principal}
                     onChange={setPrincipal}
@@ -35,7 +37,9 @@ const CIInputFrom: React.FC<Props> = ({ onChange }: Props) => {
             </FormControl>
 
             <FormControl id="interest">
-                <FormLabel fontSize="sm">Interest Rate</FormLabel>
+                <FormLabel fontSize="sm" fontWeight="normal">
+                    Interest Rate
+                </FormLabel>
                 <NumberSlider
                     value={interestRate}
                     onChange={setInterestRate}
@@ -46,7 +50,9 @@ const CIInputFrom: React.FC<Props> = ({ onChange }: Props) => {
             </FormControl>
 
             <FormControl id="monthlyDeposit">
-                <FormLabel fontSize="sm">Monthly deposit</FormLabel>
+                <FormLabel fontSize="sm" fontWeight="normal">
+                    Monthly deposit
+                </FormLabel>
                 <NumberSlider
                     value={monthlyDeposit}
                     onChange={setMonthlyDeposit}
