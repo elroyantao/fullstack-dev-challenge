@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Image } from '@chakra-ui/react'
 import images from '../../images'
 
-const NavHeader = () => (
+const NavHeader: React.FC = () => (
     <Box
         display="flex"
         flexDirection="row"

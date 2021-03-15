@@ -6,7 +6,7 @@ type LayoutProps = {
     children: React.ReactNode
 }
 
-const DefaultLayout = ({ children }: LayoutProps) => (
+const DefaultLayout: React.FC<LayoutProps> = ({ children }: LayoutProps) => (
     <Box display="flex" minHeight="100vh" height="100%" flexDirection="column">
         <NavHeader />
         <>{children}</>
