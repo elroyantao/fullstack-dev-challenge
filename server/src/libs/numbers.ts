@@ -1,4 +1,4 @@
-export const roundValue = (value: number, scale: number = 2) => {
-  const rounded = + value.toFixed(scale)
-  return rounded
+export const roundValue = (value: number, scale = 2): number => {
+    const rounded = +value.toFixed(scale)
+    return rounded
 }
