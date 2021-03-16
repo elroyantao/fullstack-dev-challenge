@@ -10,8 +10,9 @@ To run the app, `cd` into the project root directory and run `yarn install` & `y
 
 Depending on your environment, you might need to install concurrently / Typescript globally.
 
-There is one basic test written in the client, which you can run by performing
-`cd client` and then `yarn test`. If you want to add new client tests you can use Jest.
+#### Testing the solution
+
+Run `yarn test` in the root folder
 
 Mocha has been installed on the server to allow you to create server tests if you wish,
 although none have been written yet.
@@ -78,3 +79,26 @@ We believe Prettier makes your life easier! There is an example .prettierrc incl
 
 You might need to give your IDE a nudge to pick the settings up - [here's an example](https://stackoverflow.com/a/58669550/4388938) of how to do that with VS Code
 
+
+## The Solution
+#### Things done
+- I have used Yarn workspaces to setup the project
+- **Backend**
+  - Express app
+  - Used Joi for validation
+  - Jest to unit test the libs
+- **Frontend**
+  - Created a few UI Components (eg NumberSlider for to use a  number input with a slider)
+  - Structured the project for future extension
+  - Worte a few unit test using Jest + Express (Did not have enough time to spare for more tests)
+  - Added a result table, with toggle for yearly/monthly data
+  - All calls are made on change of any input, when all fields are filled out
+
+#### What I like?
+I am quite happy with the NumberSlider component that I wrote.
+
+#### What would I improve
+- Bettere error handling on the FE
+- Better design
+- Add more FE test (Some end to end test)
+- Other types of calculators 
