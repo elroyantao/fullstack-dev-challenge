@@ -12,6 +12,8 @@
   "scripts": {
     "client": "yarn workspace client start",
     "server": "yarn workspace server start",
-    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\"",
+    "test": "yarn workspace server run test && yarn workspace client run test",
+    "lint": "yarn workspace server run lint && yarn workspace client run lint"
   }
 }
