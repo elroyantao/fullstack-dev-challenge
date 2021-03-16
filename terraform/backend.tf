@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     organization = "EATechSolutions"
-    workspaces { 
+    workspaces {
       name = "finimize-prod"
     }
   }
