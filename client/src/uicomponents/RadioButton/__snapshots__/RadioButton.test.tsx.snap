@@ -1,28 +1,193 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RadioButtonGroup /> @renders default state 1`] = `
-<HStack
-  role="radiogroup"
+<RadioButtonGroup
+  defaultValue="a"
+  name="name"
+  onChange={[MockFunction]}
+  options={
+    Array [
+      "a",
+      "b",
+    ]
+  }
 >
-  <RadioButton
-    enterKeyHint="a"
-    isChecked={true}
-    key="a"
-    name="name"
-    onChange={[Function]}
-    value="a"
+  <HStack
+    role="radiogroup"
   >
-    a
-  </RadioButton>
-  <RadioButton
-    enterKeyHint="b"
-    isChecked={false}
-    key="b"
-    name="name"
-    onChange={[Function]}
-    value="b"
-  >
-    b
-  </RadioButton>
-</HStack>
+    <Stack
+      align="center"
+      direction="row"
+      role="radiogroup"
+    >
+      <Styled(div)
+        __css={
+          Object {
+            "& > *:not(style) ~ *:not(style)": Object {
+              "marginStart": "0.5rem",
+              "marginTop": 0,
+            },
+          }
+        }
+        alignItems="center"
+        className="chakra-stack"
+        display="flex"
+        flexDirection="row"
+        role="radiogroup"
+      >
+        <div
+          className="chakra-stack css-benynn"
+          role="radiogroup"
+        >
+          <RadioButton
+            enterKeyHint="a"
+            isChecked={true}
+            key=".$a"
+            name="name"
+            onChange={[Function]}
+            value="a"
+          >
+            <Box
+              as="label"
+            >
+              <label
+                className="css-1u8qly9"
+              >
+                <input
+                  checked={true}
+                  name="name"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  style={
+                    Object {
+                      "border": "0px",
+                      "clip": "rect(0px, 0px, 0px, 0px)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": "0px",
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                  type="radio"
+                  value="a"
+                />
+                <Box
+                  _checked={
+                    Object {
+                      "bg": "primary",
+                      "borderColor": "primary",
+                      "color": "white",
+                      "fontWeight": "bold",
+                    }
+                  }
+                  aria-hidden={true}
+                  borderRadius="md"
+                  borderWidth="1px"
+                  cursor="pointer"
+                  data-checked=""
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  px={5}
+                  py={3}
+                >
+                  <div
+                    aria-hidden={true}
+                    className="css-1p0pe0n"
+                    data-checked=""
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                  >
+                    a
+                  </div>
+                </Box>
+              </label>
+            </Box>
+          </RadioButton>
+          <RadioButton
+            enterKeyHint="b"
+            isChecked={false}
+            key=".$b"
+            name="name"
+            onChange={[Function]}
+            value="b"
+          >
+            <Box
+              as="label"
+            >
+              <label
+                className="css-1u8qly9"
+              >
+                <input
+                  checked={false}
+                  name="name"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  style={
+                    Object {
+                      "border": "0px",
+                      "clip": "rect(0px, 0px, 0px, 0px)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": "0px",
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                  type="radio"
+                  value="b"
+                />
+                <Box
+                  _checked={
+                    Object {
+                      "bg": "primary",
+                      "borderColor": "primary",
+                      "color": "white",
+                      "fontWeight": "bold",
+                    }
+                  }
+                  aria-hidden={true}
+                  borderRadius="md"
+                  borderWidth="1px"
+                  cursor="pointer"
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  px={5}
+                  py={3}
+                >
+                  <div
+                    aria-hidden={true}
+                    className="css-1p0pe0n"
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                  >
+                    b
+                  </div>
+                </Box>
+              </label>
+            </Box>
+          </RadioButton>
+        </div>
+      </Styled(div)>
+    </Stack>
+  </HStack>
+</RadioButtonGroup>
 `;

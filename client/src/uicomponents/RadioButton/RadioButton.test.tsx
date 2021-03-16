@@ -1,8 +1,11 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
 import RadioButtonGroup from './RadioButton'
+import { act } from 'react-dom/test-utils'
+
+const runAllPromises = () => new Promise(setImmediate)
 
 const onChangeMock = jest.fn()
 
@@ -13,7 +16,7 @@ beforeEach(() => {
 describe('<RadioButtonGroup />', () => {
     describe('@renders', () => {
         it('default state', () => {
-            const wrapper = shallow(
+            const wrapper = mount(
                 <RadioButtonGroup
                     options={['a', 'b']}
                     defaultValue={'a'}
@@ -23,12 +26,14 @@ describe('<RadioButtonGroup />', () => {
             )
             expect(toJson(wrapper)).toMatchSnapshot()
             expect(onChangeMock).toHaveBeenCalledTimes(0)
+            expect(wrapper.find('RadioButton[value="a"] input').prop('checked')).toBe(true)
+            expect(wrapper.find('RadioButton[value="b"] input').prop('checked')).toBe(false)
         })
     })
 
     describe('@side-effect', () => {
-        it('should called onchange with `a` when radio button with value="a" has been clicked', () => {
-            const wrapper = shallow(
+        it('should called onchange with `b` when radio button with value="a" has been clicked', async () => {
+            const wrapper = mount(
                 <RadioButtonGroup
                     options={['a', 'b']}
                     defaultValue={'a'}
@@ -36,9 +41,18 @@ describe('<RadioButtonGroup />', () => {
                     onChange={onChangeMock}
                 />
             )
-            wrapper.find('RadioButton[value="a"]').simulate('change', 'a')
+            expect(wrapper.find('RadioButton[value="a"] input').prop('checked')).toBe(true)
+            expect(wrapper.find('RadioButton[value="b"] input').prop('checked')).toBe(false)
+
+            wrapper.find('RadioButton[value="b"] input').simulate('change')
+
+            await runAllPromises()
+            wrapper.update()
+
             expect(onChangeMock).toHaveBeenCalledTimes(1)
-            expect(onChangeMock).toHaveBeenLastCalledWith('a')
+            expect(onChangeMock).toHaveBeenLastCalledWith('b')
+            expect(wrapper.find('RadioButton[value="b"] input').prop('checked')).toBe(true)
+            expect(wrapper.find('RadioButton[value="a"] input').prop('checked')).toBe(false)
         })
     })
 })
