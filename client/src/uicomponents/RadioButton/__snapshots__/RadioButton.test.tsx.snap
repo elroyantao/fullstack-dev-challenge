@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButtonGroup /> @renders default state 1`] = `
+<HStack
+  role="radiogroup"
+>
+  <RadioButton
+    enterKeyHint="a"
+    isChecked={true}
+    key="a"
+    name="name"
+    onChange={[Function]}
+    value="a"
+  >
+    a
+  </RadioButton>
+  <RadioButton
+    enterKeyHint="b"
+    isChecked={false}
+    key="b"
+    name="name"
+    onChange={[Function]}
+    value="b"
+  >
+    b
+  </RadioButton>
+</HStack>
+`;
