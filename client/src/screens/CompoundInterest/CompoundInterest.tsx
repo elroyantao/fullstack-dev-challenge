@@ -4,7 +4,7 @@ import calculateProjection, {
     IProjection,
     IProjectionRequest,
 } from '../../api/compoundInterest/calculateProjection'
-import CIGraph from '../../components/CIGraph'
+import CIResult from '../../components/CIResult'
 import CIInfo from '../../components/CIInfo'
 import CIInputFrom from '../../components/CIInputForm'
 import Card from '../../uicomponents/Card'
@@ -46,7 +46,7 @@ const CompoundInterest: React.FC = () => {
 
             {projection.length > 0 && (
                 <Card w="100%" mt={4} mb={4}>
-                    <CIGraph projection={projection} />
+                    <CIResult projection={projection} />
                 </Card>
             )}
         </Container>

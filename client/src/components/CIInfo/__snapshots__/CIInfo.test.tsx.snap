@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CIInfo /> @renders with projection 1`] = `
+<Flex
+  direction="column"
+  h="100%"
+>
+  <Box
+    bg="primary"
+    color="white"
+    fontWeight="bold"
+    m={-4}
+    mb={0}
+    p={4}
+  >
+    Your Savings Details
+  </Box>
+  <Flex
+    align="flex-start"
+    direction="column"
+    h="100%"
+    justify="space-around"
+    m={-4}
+    mt={0}
+  >
+    <CIInfoSection
+      amount={1100}
+      borderBottom="1px "
+      title="Total Deposits"
+    />
+    <CIInfoSection
+      amount={16.67}
+      title="Total Interest Paid"
+    />
+    <CIInfoSection
+      amount={1116.67}
+      title="Your Balance"
+    />
+  </Flex>
+</Flex>
+`;
+
+exports[`<CIInfo /> @renders with projection 2`] = `
+<Flex
+  alignItems="center"
+  bg="blue400"
+  borderRadius="8px"
+  height="100%"
+  p={8}
+  width="100%"
+>
+  <Text
+    fontSize="xl"
+  >
+    Use our compound interest calculator to see how much your savings or investments might grow over time. You can include regular deposits or withdrawals.
+  </Text>
+</Flex>
+`;

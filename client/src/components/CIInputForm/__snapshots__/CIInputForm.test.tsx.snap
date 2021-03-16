@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CIInputFrom /> @renders default state 1`] = `
+<VStack
+  height="100%"
+  justify="space-between"
+>
+  <FormControl
+    id="principal"
+  >
+    <FormLabel
+      fontSize="sm"
+      fontWeight="normal"
+    >
+      Initial deposit
+    </FormLabel>
+    <NumberSlider
+      max={1000000}
+      maxSlider={100000}
+      onChange={[Function]}
+      value={0}
+    />
+  </FormControl>
+  <FormControl
+    id="interest"
+  >
+    <FormLabel
+      fontSize="sm"
+      fontWeight="normal"
+    >
+      Interest Rate
+    </FormLabel>
+    <NumberSlider
+      max={20}
+      maxSlider={20}
+      onChange={[Function]}
+      step={0.01}
+      value={0}
+    />
+  </FormControl>
+  <FormControl
+    id="monthlyDeposit"
+  >
+    <FormLabel
+      fontSize="sm"
+      fontWeight="normal"
+    >
+      Monthly deposit
+    </FormLabel>
+    <NumberSlider
+      max={10000}
+      maxSlider={10000}
+      onChange={[Function]}
+      value={0}
+    />
+  </FormControl>
+</VStack>
+`;

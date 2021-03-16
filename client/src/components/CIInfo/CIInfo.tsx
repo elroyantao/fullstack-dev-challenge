@@ -10,12 +10,19 @@ type Props = {
 const CIInfo: React.FC<Props> = ({ projections }: Props) => {
     if (!projections.length) {
         return (
-            <Box width="100%" bg="blue400" height="100%" borderRadius="8px" p={8}>
+            <Flex
+                width="100%"
+                bg="blue400"
+                height="100%"
+                borderRadius="8px"
+                p={8}
+                alignItems="center"
+            >
                 <Text fontSize="xl">
                     Use our compound interest calculator to see how much your savings or investments
                     might grow over time. You can include regular deposits or withdrawals.
                 </Text>
-            </Box>
+            </Flex>
         )
     }
 
