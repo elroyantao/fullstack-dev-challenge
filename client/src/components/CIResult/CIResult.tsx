@@ -24,7 +24,13 @@ const CIGraph: React.FC<Props> = ({ projection }: Props) => {
 
     return (
         <Box>
-            <Stack direction={['column', 'row']} justifyContent="space-between" p={4} mb={4}>
+            <Stack
+                direction={['column', 'row']}
+                justifyContent="space-between"
+                alignItems="center"
+                p={4}
+                mb={4}
+            >
                 <RadioButtonGroup
                     options={periodOptions}
                     defaultValue={periodType}

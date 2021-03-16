@@ -17,13 +17,17 @@ const CITable: React.FC<Props> = ({ projection, periodType }: Props) => {
     }
 
     return (
-        <Table>
+        <Table size="sm">
             <TableCaption>Savings over time - ({periodType})</TableCaption>
             <Thead>
                 <Tr>
                     <Th isNumeric>{periodType}</Th>
-                    <Th isNumeric>Deposit</Th>
-                    <Th isNumeric>Interest</Th>
+                    <Th isNumeric display={['none', 'none', 'table-cell']}>
+                        Deposit
+                    </Th>
+                    <Th isNumeric display={['none', 'none', 'table-cell']}>
+                        Interest
+                    </Th>
                     <Th isNumeric>Total Deposit</Th>
                     <Th isNumeric>Total Interest</Th>
                     <Th isNumeric>Balance</Th>
@@ -33,8 +37,12 @@ const CITable: React.FC<Props> = ({ projection, periodType }: Props) => {
                 {projection.map((proj: IProjection, i: number) => (
                     <Tr key={proj.month} bg={getRowColor(i)}>
                         <Td isNumeric>{periodType === 'Years' ? proj.month / 12 : proj.month}</Td>
-                        <Td isNumeric>{proj.deposit}</Td>
-                        <Td isNumeric>{proj.interest}</Td>
+                        <Td isNumeric display={['none', 'none', 'table-cell']}>
+                            {proj.deposit}
+                        </Td>
+                        <Td isNumeric display={['none', 'none', 'table-cell']}>
+                            {proj.interest}
+                        </Td>
                         <Td isNumeric>{proj.totalDeposit}</Td>
                         <Td isNumeric>{proj.totalInterest}</Td>
                         <Td isNumeric>{proj.balance}</Td>
