@@ -112,7 +112,7 @@ jobs:
         run: yarn test
 
   deploy-website:
-    needs: [terraform-apply, test]
+    needs: terraform-apply
     name: "Deploy Website"
     runs-on: ubuntu-latest
     if: |
